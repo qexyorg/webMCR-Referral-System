@@ -1,0 +1,53 @@
+<div class="refer-install">
+	<h4>Установка - Шаг 1</h4>
+	<?php echo $data['WRITE_MENU']; ?>
+	<?php echo $data['WRITE_CONFIGS']; ?>
+	<?php echo $data['WRITE_CFG']; ?>
+	<div class="refer-settings">
+		<form method="post">
+			<table class="table table-hover table-bordered">
+
+				<tbody>
+					<tr>
+						<td class="name">Название модуля
+							<div class="desc">- Название модуля системы пользователей (Отображается в заголовке страницы и хлебных крошках)</div>
+						</td>
+						<td class="inputs"><input type="text" name="title" placeholder="Название" value="<?php echo $this->cfg['title']; ?>" required></td>
+					</tr>
+
+					<tr>
+						<td class="name">Использовать систему пользователей
+							<div class="desc">- Функция добавляет дополнительный функционал при использовании модуля "<a href="https://github.com/qexyorg/webMCR-User-System" target="_blank">User System</a>"</div>
+						</td>
+						<td class="inputs">
+							<select name="use_us">
+								<option value="0">Нет</option>
+								<option value="1">Да</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="name">Использовать MailBox
+							<div class="desc">- Если вы используете модуль "<a href="https://github.com/qexyorg/webMCR-MailBox" target="_blank">MailBox</a>", то при просмотре полной информации о пользователе, будет выводиться кнопка для отправки сообщения пользователю</div>
+						</td>
+						<td class="inputs">
+							<select name="use_mailbox">
+								<option value="0">Нет</option>
+								<option value="1">Да</option>
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="submits" colspan="2">
+							<input type="submit" class="btn btn-primary" name="submit" value="Далее">
+						</td>
+					</tr>
+				</tbody>
+
+			</table>
+		</form>
+	</div>
+
+</div>

@@ -1,0 +1,29 @@
+.refer-global .menu { margin: 5px; display: block; text-align: right; }
+
+.refer-global .refer-list.table-hover tbody tr > td {
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.refer-global .refer-list.table-hover tbody tr:hover > td {
+	background-color: #d9edf7;
+}
+
+.refer-global .cleaner { clear: both; }
+.refer-global .alert { margin-bottom: 0px; }
+
+.refer-global .refer-list td { vertical-align: middle; }
+.refer-global .refer-list td .thumbnail { width: 32px; height: 32px; }
+
+.refer-global .form-actions { background-color: #ededed; }
+
+.refer-global .form-mailbox { display: inline-block; margin-bottom: 0px; }
+
+.refer-global .refer-settings .table { font-family: verdana; background: #fff; }
+.refer-global .refer-settings .table .name { font-weight: bold; color: #555; width: 60%; }
+.refer-global .refer-settings .table .desc { font-weight: normal; color: #999; font-size: 11px; }
+.refer-global .refer-settings .table .submits { text-align: right; }
+
+.refer-copyright { display: block; width: 54px; height: 55px; background: url("../img/copyright_icon.png") no-repeat; float: right; margin-top: 10px; }

@@ -1,0 +1,14 @@
+<form method="post" class="form-invite form-actions text-center form-inline">
+	<input type="text" name="login" value="<?php echo $data['INVITE']; ?>" placeholder="Пригласивший">
+	<input type="hidden" name="<?php echo $data['API_SECURITY']; ?>" value="<?php echo $data['API_SET']; ?>">
+	<button class="btn btn-success accept" type="submit">Подтвердить</button>
+</div>
+
+<script>
+	$(function(){
+		if($.trim("<?php echo $data['INVITE']; ?>") != ''){
+			alert('Вы перешли по реферально ссылке. Для подверждения нажмите \"Подтвердить\"');
+			$('.form-invite .accept').append(' <img alt="<-" src="<?php echo MOD_STYLE; ?>img/leftarrow.gif">');
+		}
+	});
+</script>

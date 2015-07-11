@@ -1,0 +1,14 @@
+<tr>
+	<td><?php echo $data['UID']; ?></td>
+	<td><?php echo $data['LOGIN']; ?></td>
+	<td><?php echo $data['EMAIL']; ?></td>
+	<td><?php echo $data['UIP']; ?></td>
+	<td><?php echo $data['IP']; ?></td>
+	<td><?php echo $data['DATE_REG']; ?></td>
+	<td>
+		<a class="btn btn-mini" rel="tooltip" title="Профиль а админ-панеле" href="<?php echo BASE_URL; ?>index.php?user_id=<?php echo $data['UID']; ?>&mode=control&do=profile"><i class="icon-user"></i></a>
+		<a class="btn btn-mini" rel="tooltip" title="Поиск по реферальному IP" href="<?php echo BASE_URL; ?>index.php?mode=control&do=search&sby=ip&input=<?php echo $data['IP']; ?>"><i class="icon-search"></i></a>
+		<a class="btn btn-mini" rel="tooltip" title="Поиск по пользовательскому IP" href="<?php echo BASE_URL; ?>index.php?mode=control&do=search&sby=ip&input=<?php echo $data['UIP']; ?>"><i class="icon-zoom-in"></i></a>
+
+	</td>
+</tr>

@@ -1,0 +1,82 @@
+<div class="user-settings">
+	<form method="post">
+		<table class="table table-hover table-bordered">
+
+			<tbody>
+				<tr>
+					<td class="name">Название
+						<div class="desc">- Название модуля реферальной системы (Отображается в заголовке страницы и хлебных крошках)</div>
+					</td>
+					<td class="inputs"><input type="text" name="title" placeholder="Название" value="<?php echo $this->cfg['title']; ?>" required></td>
+				</tr>
+
+				<tr>
+					<td class="name">Рефералов на страницу
+						<div class="desc">- Кол-во выводимых рефералов на одну страницу</div>
+					</td>
+					<td class="inputs"><input type="text" name="rop_list" placeholder="Число" value="<?php echo $this->cfg['rop_list']; ?>" pattern="^(\d+)$" required></td>
+				</tr>
+
+				<tr>
+					<td class="name">Подозрительных пользователей на страницу
+						<div class="desc">- Кол-во выводимых подозрительных пользователей на одну страницу</div>
+					</td>
+					<td class="inputs"><input type="text" name="rop_multiple" placeholder="Число" value="<?php echo $this->cfg['rop_multiple']; ?>" pattern="^(\d+)$" required></td>
+				</tr>
+
+				<tr>
+					<td class="name">Уровень доступа к реферальной системе
+						<div class="desc">- Минимальный уровень доступа к реферальной системе</div>
+					</td>
+					<td class="inputs"><input type="text" name="lvl_access" placeholder="Число" value="<?php echo $this->cfg['lvl_access']; ?>" required></td>
+				</tr>
+
+				<tr>
+					<td class="name">Уровень доступа к панели управления
+						<div class="desc">- Минимальный уровень доступа к панели управления статическими страницами</div>
+					</td>
+					<td class="inputs"><input type="text" name="lvl_admin" placeholder="Число" value="<?php echo $this->cfg['lvl_admin']; ?>" required></td>
+				</tr>
+
+				<tr>
+					<td class="name">Награда
+						<div class="desc">- Сумма, которую получит пригласивший игрок на свой баланс</div>
+					</td>
+					<td class="inputs"><input type="text" name="money" placeholder="Число" value="<?php echo $this->cfg['money']; ?>" required></td>
+				</tr>
+
+				<tr>
+					<td class="name">Использовать MailBox
+						<div class="desc">- Совместимость с модулем <b><a href="https://github.com/qexyorg/webMCR-MailBox" target="_blank">MailBox</a></b>, которая добавляет дополнительные кнопки, для отправки личных сообщений</div>
+					</td>
+					<td class="inputs">
+						<select name="use_mailbox">
+							<option value="0">Нет</option>
+							<option value="1" <?php echo $data['USE_MAILBOX']; ?>>Да</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="name">Использовать систему пользователей
+						<div class="desc">- Совместимость с модулем <b><a href="https://github.com/qexyorg/webMCR-User-System" target="_blank">User System</a></b>, которая подсвечивает выводимых пользователей, ссылкой на их профиль</div>
+					</td>
+					<td class="inputs">
+						<select name="use_us">
+							<option value="0">Нет</option>
+							<option value="1" <?php echo $data['USE_US']; ?>>Да</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="submits" colspan="2">
+						<input type="hidden" name="<?php echo $data['API_SECURITY']; ?>" value="<?php echo $data['API_SET']; ?>">
+						<input type="submit" class="btn btn-primary" name="submit" value="Сохранить">
+					</td>
+				</tr>
+			</tbody>
+
+		</table>
+	</form>
+</div>

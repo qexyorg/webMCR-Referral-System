@@ -1,0 +1,6 @@
+.refer-content .refer-install { font-family: verdana; font-size: 12px; }
+.refer-content .refer-install h4 { color: #555; }
+.refer-content .refer-install .reinst { margin: 10px; }
+.refer-content .refer-install .ins-submit { text-align: right; margin-top: 20px; }
+.refer-content .refer-install .ins-menu { width: 580px; height: 66px; border: 2px double #ccc; border-radius: 4px; background: url("../img/menu.png") no-repeat; margin: 10px; }
+.refer-content .refer-install .refer-logo { width: 165px; height: 173px; background: url("../img/logo.png") no-repeat; float: right; }
