@@ -146,6 +146,8 @@ class module{
 		$bd_names		= $this->mcfg['bd_names'];
 		$bd_users		= $this->mcfg['bd_users'];
 
+		$refers			= $this->refer_array();
+
 		$query = $this->db->query("SELECT `u`.`{$bd_users['login']}`
 									FROM `qx_ref_invites` AS `i`
 									INNER JOIN `{$bd_names['users']}` AS `u`
@@ -156,7 +158,7 @@ class module{
 
 		$data = array(
 			"PAGINATION"	=> $pagination,
-			"CONTENT"		=> $this->refer_array(),
+			"CONTENT"		=> $refers,
 			"INVITE_FORM"	=> ($this->db->num_rows($query)<=0) ? $this->invited_form() : $this->invited_by($query),
 		);
 
@@ -205,7 +207,7 @@ class module{
 
 			if(!$update){ $this->api->notify("Произошла ошибка базы данных main#".__LINE__.$this->db->error.". Ошибка таблицы экономики.", "", "Внимание!", 3); }
 
-			$this->api->notify("Вы успешно подтвердили приглашение", "Поздравляем!", 1);
+			$this->api->notify("Вы успешно подтвердили приглашение", "", "Поздравляем!", 1);
 
 		}
 
